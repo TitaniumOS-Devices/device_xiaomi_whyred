@@ -26,9 +26,14 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
 # Inherit some common Mokee stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/titanium/config/common_full_phone.mk)
+TITANIUM_BUILD_TYPE := OFFICIAL
 
-PRODUCT_NAME := lineage_whyred
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.titanium.maintainer=Skylark
+
+PRODUCT_NAME := titanium_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
